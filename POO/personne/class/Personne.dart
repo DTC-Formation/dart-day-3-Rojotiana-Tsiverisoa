@@ -28,4 +28,19 @@ class Personne {
   Adresse demanderAdresse(Personne p) {
     return p.adresse;
   }
+
+  void attaquer(Personne player) {
+    int attaque, defense;
+    attaque = this.pointDeVie + 50;
+    defense = player.pointDeVie - 50;
+
+    print("attaquant: ${this.nom}");
+    print("point de vie restant: ${attaque}\n");
+
+    print("defenseur: ${player.nom}");
+    print("point de vie restant: ${defense}\n");
+
+    this.pointDeVie = attaque;
+    player.pointDeVie = defense;
+  }
 }
